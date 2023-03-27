@@ -1,0 +1,30 @@
+[
+  { 
+    "id": "d853ad18-a542-4620-bbf2-5d2d53140b88",
+    "title": "My story",
+    "issueType": "story",
+    "description": "testing",
+    "status": "open"
+  },
+  { 
+    "id": "d853ad18-a542-4620-bbf2-5d2d53125b43",
+    "title": "Defect in Prod",
+    "issueType": "bug",
+    "description": "Some quick example text to build on the card title and make up the bulk of the card's content. ",
+    "status": "inProgress"
+  },
+  { 
+    "id": "d883ad13-a542-4620-bbf2-5d2d53125b43",
+    "title": "Another story",
+    "issueType": "story",
+    "description": "Some quick example text to build on the card title and make up the bulk of the card's content. ",
+    "status": "open"
+  },
+  { 
+    "id": "d883ad13-a542-47534-bbf2-5d2d53125b43",
+    "title": "My Task",
+    "issueType": "task",
+    "description": "Some quick example text to build on the card title and make up the bulk of the card's content. ",
+    "status": "completed"
+  }
+]

@@ -1,0 +1,59 @@
+<div class="modal-header">
+    <h4 class="modal-title">Task</h4>
+    <button type="button" class="close" aria-label="Close"
+     (click)="activeModal.dismiss('Cross click')">
+    </button>
+</div>
+<form [formGroup]="formdata" (ngSubmit)="onSubmit()">
+    <div class="modal-boy">
+      <div class="container">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" 
+            class="form-control"
+            formControlName="title" />
+        </div>
+        <div class="form-group">
+            <input type="hidden" 
+              class="form-control"
+              formControlName="id" />
+          </div>
+        
+        <div class="form-group">
+            <div class="mb-3">
+                <label for="message-text" class="col-form-label">Issue Type:</label>
+                <select formControlName = "issueType" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option selected>Select issue type</option>
+                    <option value="bug">Bug</option>
+                    <option value="task">Task</option>
+                    <option value="story">Story</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="mb-3">
+                <label for="message-text" class="col-form-label">Status:</label>
+                <select formControlName = "status" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option selected>Select status of the issue</option>
+                    <option value="open">Open</option>
+                    <option value="inProgress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="mb-3">
+                <label for="message-text" class="col-form-label">Description:</label>
+                <textarea formControlName = "description" class="form-control" id="message-text"></textarea>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss('close btn click')">Close</button>
+      <button class="btn btn-success"
+        [disabled]="!formdata.valid">
+        Submit Form
+      </button>
+    </div>
+</form>

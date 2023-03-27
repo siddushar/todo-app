@@ -1,0 +1,87 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">TODO APP</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn" (click) ="createTask()"> New Task </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+<div cdkDropListGroup>
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card" >
+            <h5 class="card-header text-center">Open</h5>
+            <div class="card-body"> 
+              <div cdkDropList [cdkDropListData]="openTasks" id="open"
+                (cdkDropListDropped)="onDrop($event)">
+                <div *ngFor="let task of openTasks" cdkDrag>
+                    <div class="card text-dark bg-light p-2 mb-3">
+                        <div class="card-header  bg-transparent border-bottom-0">
+                            <button type="button" class="btn-close card-close-btn" (click) ="deleteTask(task)" aria-label="Close"></button>
+                        </div>
+                        <h5 class="card-title"> {{ task.title }}</h5>
+                        <p class="card-text"> {{ task.description }}</p>
+                        <button type="button" class="btn btn-secondary" (click) ="editForm(task)">Edit</button>
+                    </div>
+        
+                </div>
+              </div>
+              
+            </div>
+        </div> 
+      </div>
+      <div class="col">
+        <div class="card">
+            <h5 class="card-header text-center">In Progress</h5>
+            <div class="card-body">
+              <div cdkDropList [cdkDropListData]="inProgressTasks" id="inProgress"
+                (cdkDropListDropped)="onDrop($event)">
+              <div *ngFor="let task of inProgressTasks" cdkDrag>
+                <div class="card text-dark bg-light p-2 mb-3">
+                    <div class="card-header  bg-transparent border-bottom-0">
+                        <button type="button" class="btn-close card-close-btn" (click)="deleteTask(task)" aria-label="Close"></button>
+                    </div>
+                    <h5 class="card-title"> {{ task.title }}</h5>
+                    <p class="card-text"> {{ task.description }}</p>
+                    <button type="button" class="btn btn-secondary" (click)="editForm(task)">Edit</button>
+                </div>
+              </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+            <h5 class="card-header text-center">Completed</h5>
+            <div class="card-body">
+              <div cdkDropList [cdkDropListData]="completedTasks" id="completed"
+                class="task-list" (cdkDropListDropped)="onDrop($event)">
+              <div *ngFor="let task of completedTasks" cdkDrag>
+                <div class="card text-dark bg-light p-2 mb-3">
+                    <div class="card-header bg-transparent border-bottom-0">
+                      <button type="button" class="btn-close card-close-btn" (click)="deleteTask(task)" aria-label="Close"></button>
+                    </div>
+                    <h5 class="card-title">{{ task.title }}</h5>
+                    <p class="card-text">{{ task.description }}</p>
+                    <button type="button" class="btn btn-secondary" (click)="editForm(task)">Edit</button>
+                </div>
+              </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
