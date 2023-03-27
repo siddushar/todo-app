@@ -10,7 +10,6 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ColumnComponent } from './column/column.component';
-import { CardComponent } from './card/card.component';
 import { ModalComponent } from './modal/modal.component';
 import { TaskModalComponent } from './task-modal/task-modal.component';
 
@@ -18,7 +17,6 @@ import { TaskModalComponent } from './task-modal/task-modal.component';
   declarations: [
     AppComponent,
     ColumnComponent,
-    CardComponent,
     ModalComponent,
     TaskModalComponent
   ],
