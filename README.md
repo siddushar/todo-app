@@ -28,3 +28,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Screenshots
 
+**Board**
+<img width="1436" alt="Screenshot 2023-03-27 at 3 21 19 PM" src="https://user-images.githubusercontent.com/16487992/227911024-930f485b-3639-464b-b842-4bc0a11b38cb.png">
+
+**Add Task**
+<img width="1457" alt="Screenshot 2023-03-27 at 3 21 42 PM" src="https://user-images.githubusercontent.com/16487992/227911050-cac5412c-2de3-46a5-8e74-41c65fc44760.png">
+
+**Edit Task**
+<img width="1456" alt="Screenshot 2023-03-27 at 3 21 53 PM" src="https://user-images.githubusercontent.com/16487992/227911057-8bf6054f-35fc-417a-9cec-33746ad5af32.png">
+
+**video**
+![todo-app-gif](https://user-images.githubusercontent.com/16487992/227911358-6fd70319-f96e-4d64-804f-9e4b702e54f2.gif)
